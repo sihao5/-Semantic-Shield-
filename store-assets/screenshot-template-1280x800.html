@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Semantic Shield Store Screenshot</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 1280px;
+      height: 800px;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: linear-gradient(145deg, #e0e7ff 0%, #f8fafc 45%, #dbeafe 100%);
+    }
+    .canvas {
+      width: 1280px;
+      height: 800px;
+      padding: 48px 56px;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 40px;
+      align-items: start;
+    }
+    .hero h1 {
+      font-size: 42px;
+      color: #1e3a8a;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #475569;
+      line-height: 1.6;
+      max-width: 640px;
+    }
+    .badges {
+      display: flex;
+      gap: 10px;
+      margin: 24px 0;
+      flex-wrap: wrap;
+    }
+    .badge {
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 13px;
+      color: #334155;
+      font-weight: 600;
+    }
+    .features {
+      margin-top: 28px;
+      display: grid;
+      gap: 12px;
+    }
+    .feature {
+      background: rgba(255,255,255,0.85);
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #334155;
+    }
+    .feature strong { color: #1d4ed8; display: block; margin-bottom: 4px; }
+    .mock-browser {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 20px 50px rgba(30, 64, 175, 0.18);
+      border: 1px solid #cbd5e1;
+      overflow: hidden;
+    }
+    .browser-bar {
+      background: #f1f5f9;
+      padding: 10px 14px;
+      display: flex;
+      gap: 6px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot.r { background: #f87171; }
+    .dot.y { background: #fbbf24; }
+    .dot.g { background: #4ade80; }
+    .popup {
+      background: #f8fafc;
+      color: #1e293b;
+    }
+    .popup-header {
+      padding: 14px 16px;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #fff;
+    }
+    .popup-header h2 { font-size: 16px; }
+    .popup-header p { font-size: 12px; opacity: 0.92; margin-top: 4px; }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 12px;
+    }
+    .row strong { font-size: 13px; }
+    .row span { color: #64748b; font-size: 11px; display: block; margin-top: 2px; }
+    .toggle {
+      width: 40px; height: 22px; background: #2563eb; border-radius: 22px; position: relative;
+    }
+    .toggle::after {
+      content: ""; position: absolute; width: 16px; height: 16px; background: #fff;
+      border-radius: 50%; right: 3px; top: 3px;
+    }
+    .btn {
+      margin: 10px 16px;
+      display: block;
+      width: calc(100% - 32px);
+      padding: 9px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .btn-primary { background: #2563eb; color: #fff; }
+    .btn-secondary { background: #e2e8f0; color: #334155; }
+    .footer {
+      position: absolute;
+      bottom: 24px;
+      left: 56px;
+      font-size: 12px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="hero">
+      <h1>语义盾牌 Semantic Shield</h1>
+      <p>解除复制与右键限制，高亮假关闭按钮，屏蔽自动弹窗与右下角广告，并提供取消订阅快捷助手与屏蔽管理清单。</p>
+      <div class="badges">
+        <span class="badge">Firefox</span>
+        <span class="badge">Chrome</span>
+        <span class="badge">Edge</span>
+        <span class="badge">中英双语</span>
+      </div>
+      <div class="features">
+        <div class="feature"><strong>解除操作限制</strong>恢复复制、粘贴、选择与右键菜单</div>
+        <div class="feature"><strong>高亮假关闭按钮</strong>标注隐蔽的关闭/取消/拒绝控件</div>
+        <div class="feature"><strong>屏蔽广告与自动弹窗</strong>拦截脚本弹窗、自动跳转、右下角浮窗</div>
+        <div class="feature"><strong>屏蔽管理清单</strong>恢复显示后免自动屏蔽，可再次手动屏蔽</div>
+      </div>
+    </div>
+    <div class="mock-browser">
+      <div class="browser-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+      </div>
+      <div class="popup">
+        <div class="popup-header">
+          <h2>语义盾牌</h2>
+          <p>还原文页自由操作</p>
+        </div>
+        <div class="row">
+          <div><strong>解除操作限制</strong><span>恢复复制与右键</span></div>
+          <div class="toggle"></div>
+        </div>
+        <div class="row">
+          <div><strong>高亮假关闭按钮</strong><span>标注暗黑套路按钮</span></div>
+          <div class="toggle"></div>
+        </div>
+        <div class="row">
+          <div><strong>屏蔽广告与自动弹窗</strong><span>拦截弹窗与浮窗广告</span></div>
+          <div class="toggle"></div>
+        </div>
+        <button class="btn btn-primary">恢复页面交互</button>
+        <button class="btn btn-secondary">重新扫描当前页面</button>
+        <button class="btn btn-secondary">立即屏蔽当前页</button>
+      </div>
+    </div>
+  </div>
+  <p class="footer">截图说明：在浏览器中打开本文件，按 F11 或缩放至 1280×800 后截图，用于商店上架。</p>
+</body>
+</html>

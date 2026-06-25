@@ -1,0 +1,6 @@
+{
+  "extensionName": { "message": "语义盾牌" },
+  "extensionDescription": {
+    "message": "解除复制/右键限制，高亮假关闭按钮，屏蔽自动弹窗与右下角广告，取消订阅快捷助手。支持 Firefox、Chrome、Edge。"
+  }
+}

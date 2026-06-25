@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Semantic Shield Marquee 1400x560</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 1400px;
+      height: 560px;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: linear-gradient(145deg, #dbeafe 0%, #f8fafc 40%, #e0e7ff 100%);
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      gap: 48px;
+      padding: 56px 64px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 52px;
+      color: #1e3a8a;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: 20px;
+      color: #475569;
+      line-height: 1.55;
+      max-width: 720px;
+    }
+    .badges {
+      display: flex;
+      gap: 12px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: 14px;
+      color: #334155;
+      font-weight: 600;
+    }
+    .popup {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 24px 60px rgba(30, 64, 175, 0.2);
+      border: 1px solid #cbd5e1;
+      overflow: hidden;
+    }
+    .popup-header {
+      padding: 18px 20px;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #fff;
+    }
+    .popup-header h2 { font-size: 20px; }
+    .popup-header p { font-size: 13px; opacity: 0.92; margin-top: 6px; }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 14px;
+    }
+    .row strong { display: block; font-size: 15px; color: #1e293b; }
+    .row span { color: #64748b; font-size: 12px; }
+    .toggle {
+      width: 44px; height: 24px; background: #2563eb; border-radius: 24px; position: relative;
+    }
+    .toggle::after {
+      content: ""; position: absolute; width: 18px; height: 18px; background: #fff;
+      border-radius: 50%; right: 3px; top: 3px;
+    }
+    .btn {
+      margin: 12px 20px;
+      display: block;
+      width: calc(100% - 40px);
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      background: #2563eb;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Semantic Shield</h1>
+    <p>Restore copy, paste &amp; right-click. Highlight hidden close buttons. Block nuisance ads, auto popups, and corner floaters.</p>
+    <div class="badges">
+      <span class="badge">Unlock actions</span>
+      <span class="badge">Block ads</span>
+      <span class="badge">Block list</span>
+      <span class="badge">English &amp; Chinese</span>
+    </div>
+  </div>
+  <div class="popup">
+    <div class="popup-header">
+      <h2>Semantic Shield</h2>
+      <p>Restore freedom on the web</p>
+    </div>
+    <div class="row">
+      <div><strong>Unlock actions</strong><span>Restore copy &amp; right-click</span></div>
+      <div class="toggle"></div>
+    </div>
+    <div class="row">
+      <div><strong>Block ads &amp; popups</strong><span>Block nuisance floaters</span></div>
+      <div class="toggle"></div>
+    </div>
+    <div class="btn">Restore page interaction</div>
+  </div>
+</body>
+</html>

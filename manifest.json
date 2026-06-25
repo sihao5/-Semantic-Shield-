@@ -1,0 +1,51 @@
+{
+  "_中文说明": {
+    "用途": "Semantic Shield v1.4.0 — 跨浏览器扩展",
+    "scripts": "anti-nuisance / unsubscribe-assistant 为新增功能模块"
+  },
+
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
+  "version": "1.4.5",
+
+  "minimum_chrome_version": "109",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "semantic-shield@extension.local",
+      "strict_min_version": "109.0"
+    }
+  },
+
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+
+  "action": {
+    "default_title": "Semantic Shield",
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "browser-api.js",
+        "i18n.js",
+        "compliance.js",
+        "blocklist-manager.js",
+        "anti-nuisance.js",
+        "unsubscribe-assistant.js",
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}
